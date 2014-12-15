@@ -1,0 +1,4 @@
+create a many user for samaj
+a samajh associate with a user
+admin user can be change a samajh information
+admin can be manage employee

@@ -10,7 +10,10 @@
 <body>
     @RenderBody()
 
+    @Scripts.Render("~/bundles/js")
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
     @RenderSection("scripts", required: false)
 </body>
 </html>
