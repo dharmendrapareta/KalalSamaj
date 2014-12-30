@@ -39,12 +39,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -53,7 +49,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -130,9 +129,47 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DataBase\Committee.cs">
+      <DependentUpon>Samaj.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\CommitteeSession.cs">
+      <DependentUpon>Samaj.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Designation.cs">
+      <DependentUpon>Samaj.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Employee.cs">
+      <DependentUpon>Samaj.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Person.cs">
+      <DependentUpon>Samaj.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\RefType.cs">
+      <DependentUpon>Samaj.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Samaj.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Samaj.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Samaj.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Samaj.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\Samaj.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Samaj.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\UserAccount.cs">
+      <DependentUpon>Samaj.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +218,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <EntityDeploy Include="DataBase\Samaj.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Samaj.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataBase\Samaj.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Samaj.edmx</DependentUpon>
+      <LastGenOutput>Samaj.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataBase\Samaj.edmx.diagram">
+      <DependentUpon>Samaj.edmx</DependentUpon>
+    </Content>
+    <Content Include="DataBase\Samaj.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Samaj.edmx</DependentUpon>
+      <LastGenOutput>Samaj.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -206,16 +260,17 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="DataBase\" />
     <Folder Include="Manager\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

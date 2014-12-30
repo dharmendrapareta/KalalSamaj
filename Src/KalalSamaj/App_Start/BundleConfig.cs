@@ -24,11 +24,11 @@ namespace KalalSamaj
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
-                        "~/Scripts/bootstrap.min.js"));
+                        "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/bootstrap.min.css",
-                "~/Content/site.css"));
+                "~/Content/site.css",
+                "~/Content/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
