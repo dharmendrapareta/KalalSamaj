@@ -1,0 +1,179 @@
+﻿@model KalalSamaj.DataBase.Employee
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Employee</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FatherOrHusbandName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FatherOrHusbandName)
+            @Html.ValidationMessageFor(model => model.FatherOrHusbandName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MotherName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MotherName)
+            @Html.ValidationMessageFor(model => model.MotherName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsActive)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsActive)
+            @Html.ValidationMessageFor(model => model.IsActive)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsPhoto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsPhoto)
+            @Html.ValidationMessageFor(model => model.IsPhoto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DOB)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DOB)
+            @Html.ValidationMessageFor(model => model.DOB)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Caste)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Caste)
+            @Html.ValidationMessageFor(model => model.Caste)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsFeMale)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsFeMale)
+            @Html.ValidationMessageFor(model => model.IsFeMale)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MarriedStats)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MarriedStats)
+            @Html.ValidationMessageFor(model => model.MarriedStats)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmailId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmailId)
+            @Html.ValidationMessageFor(model => model.EmailId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PermanentAddress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PermanentAddress)
+            @Html.ValidationMessageFor(model => model.PermanentAddress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PermanentCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PermanentCity)
+            @Html.ValidationMessageFor(model => model.PermanentCity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PermanentState)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PermanentState)
+            @Html.ValidationMessageFor(model => model.PermanentState)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TempAddres)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TempAddres)
+            @Html.ValidationMessageFor(model => model.TempAddres)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TempCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TempCity)
+            @Html.ValidationMessageFor(model => model.TempCity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TempState)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TempState)
+            @Html.ValidationMessageFor(model => model.TempState)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Mobile)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Mobile)
+            @Html.ValidationMessageFor(model => model.Mobile)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PanCardNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PanCardNo)
+            @Html.ValidationMessageFor(model => model.PanCardNo)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

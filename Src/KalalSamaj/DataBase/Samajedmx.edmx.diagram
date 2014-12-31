@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d4021ded10124c0e82be70078e802192" Name="Diagram1">
+      <Diagram DiagramId="9f4d455af0854e4aa8d734b556b03e9a" Name="Diagram1">
         <EntityTypeShape EntityType="SamajModel.Committee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SamajModel.CommitteeSession" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SamajModel.Employee" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />

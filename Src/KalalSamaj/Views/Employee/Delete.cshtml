@@ -1,0 +1,151 @@
+﻿@model KalalSamaj.DataBase.Employee
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FatherOrHusbandName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FatherOrHusbandName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MotherName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MotherName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsActive)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsActive)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsPhoto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsPhoto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DOB)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DOB)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Caste)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Caste)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IsFeMale)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IsFeMale)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MarriedStats)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MarriedStats)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmailId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmailId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PermanentAddress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PermanentAddress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PermanentCity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PermanentCity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PermanentState)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PermanentState)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TempAddres)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TempAddres)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TempCity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TempCity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TempState)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TempState)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mobile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mobile)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PanCardNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PanCardNo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

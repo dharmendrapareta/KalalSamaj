@@ -1,0 +1,141 @@
+﻿@model IEnumerable<KalalSamaj.DataBase.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FatherOrHusbandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPhoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Caste)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsFeMale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MarriedStats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermanentAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermanentCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermanentState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempAddres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempCity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempState)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PanCardNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FatherOrHusbandName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MotherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPhoto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Caste)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsFeMale)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MarriedStats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PermanentAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PermanentCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PermanentState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TempAddres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TempCity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TempState)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PanCardNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmployeeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmployeeId })
+        </td>
+    </tr>
+}
+
+</table>
